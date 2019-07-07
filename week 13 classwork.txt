@@ -1,0 +1,46 @@
+AJAX means Asynchronous Jvascript xml
+
+Cache-example of company is Cloudflier.
+
+Stataelesness -meaning that the server does not need to know anything
+               about what state the client is in and vice versa.
+ way the front end can communicate  with the server
+
+Separation of concerns-the separation allows each component the ability to 
+                      evolve independently.
+
+SOA - Server Orientented Activity
+
+JS obj -JSON.parse(*)
+
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+xhr.send();
+
+
+
+xhr.onload = function() {
+  if (xhr.status != 200) { 
+    alert(`Error ${xhr.status}: ${xhr.statusText}`);
+  } else {
+    var data = JSON.parse(xhr.response)
+    data.map(item =>{
+      document.write(item.title)
+    })
+  }
+    
+}
+
+xhr.onprogress = function(event) {
+  if (event.lengthComputable) {
+    alert(`Received ${event.loaded} of ${event.total} bytes`);
+  } else {
+    alert(`Received ${event.loaded} bytes`); 
+  }
+  
+
+};
+
+xhr.onerror = function() {
+  alert("Request failed");
+};

@@ -1,0 +1,6 @@
+let x = 78;
+do {
+    x++;
+    console.log(x);
+} while (false);
+79

@@ -1,0 +1,60 @@
+ANIMATIONS:
+
+mario.onclick = () => {
+    let start = Date.now()
+    let intervalId =setInterval(superMario , 20)
+    
+    function superMario() {
+      let timepassed = Date.now() - start
+      
+      if (timepassed > 2000){
+        clearIntervial(intervalId)
+        
+      }
+      
+      else{
+        mario.style.left = timepassed/5  + "px"; 
+      }
+    }
+  
+}
+
+
+Alerting name when using submit:
+
+<style>
+    #mypic{
+      width:300px;
+    }
+     </style>
+
+</head>
+<body>
+  <img id = "mypic" src ="https://images.immediate.co.uk/production/volatile/sites/4/2018/08/iStock_000044061370_Medium-fa5f8aa.jpg?quality=45&crop=5px,17px,929px,400px&resize=960,413">
+  <input id = "myText" type ="text"/>
+  <button id = "myBtn"> submit </button>
+
+   <input id = "mynumb" type ="number"/>
+  <button id = "myTon"> submit </button>
+  
+  
+      </body>
+</html>
+// mypic.onclick = () =>alert("clicked")
+// mypic.onmouseover = ()=> alert("mouse over")
+
+myBtn.onclick = () => {
+  var element = document.getElementById("myText")
+  alert(element.value)
+}
+
+myTon.onclick = () => {
+  var element = document.getElementById("mynumb")
+  alert(element.value)
+}
+
+mypic.addEventListener("click") , ()=>alert("cat clicked"))
+mypic.addEventListener("mouseover" , ()=>alert("cat mouse over"))
+
+
+

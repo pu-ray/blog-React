@@ -1,0 +1,35 @@
+class MumMboga {
+  
+  constructor() {
+    this.products = [];
+    this.carts = [];
+    this.orders = [];
+    this.customers  = [];
+  }
+    
+    addProduct(productId,name,price,quantity){
+      let product ={Id:productId,name:name,productprice:price,Quantity:quantity}
+      this.products.push(product)
+      return this.products
+    }
+  getProduct(productId){
+    for (var i =[0]; i<this.products.length;i++){
+      let name =this.products[i]
+    }
+  }
+
+  removeProduct(productId){
+    let product =this.getProduct(productId)
+    let index = this.products.indexOf(product)
+    this.products.splice(index,1)
+}
+}
+
+  
+var mumMboga = new MumMboga()
+mumMboga.addProduct(1,"toamatoes",20,5)
+mumMboga.addProduct(1,"cabbages",20,5)
+console.log(mumMboga.products)
+mumMboga.getProduct(1);
+mumMboga.removeProduct(1);
+console.log(mumMboga.products)

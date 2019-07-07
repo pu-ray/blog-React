@@ -1,0 +1,44 @@
+/ var div = document.getElementById("d1")
+// var p1 = document.getElementById("p1")
+// console.log(p1.textContent)
+
+// var ps = document.getElementsByTagName("p")
+// console.log(ps[1].textContent)
+
+// var p = document.getElementById("p1")
+// p.innerHtml = "First Heading updated again"
+
+// setTimeout()) => p.innerHtml = "First Heading updated again"
+
+
+ var pss = document.getElementsByClassName("pss")
+  setTimeout(() => pss[0].innerHTML = "First Heading updated",2000)
+
+var body = document.body
+body.style.backgroundColor = "green"
+
+
+
+for (var i =0; i < pss.length; i++){
+  pss[i].style.color = "white"
+}
+
+pss[1].setAttribute("foo","bar")
+
+var p3 =document.createElement("p")
+var text = document.createTextNode("Third paragraph")
+p3.appendChild(text)
+p3.style.color ="white"
+
+var div = document.getElementById("d1")
+div.appendChild(p3)
+
+
+pss[1].onclick = () => alert("clicked")
+
+document.write("DOM Manipulation")
+
+
+
+
+
